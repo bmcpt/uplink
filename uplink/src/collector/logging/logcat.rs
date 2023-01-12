@@ -98,7 +98,7 @@ pub fn parse_logcat_time(s: &str) -> Option<u64> {
         .with_minute(matches.get(4)?.as_str().parse::<u32>().ok()?)?
         .with_second(matches.get(5)?.as_str().parse::<u32>().ok()?)?
         .with_second(matches.get(6)?.as_str().parse::<u32>().ok()? * 1_000_000)?;
-    Some(date.timestamp_millis() as _)
+    Some(date.timestamp_millis() + 1 as _)
 }
 
 impl LogEntry {
