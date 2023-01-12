@@ -28,7 +28,7 @@ jobs:
     container:
       image: devduttshenoi/android-builder
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         target: [aarch64-linux-android, armv7-linux-androideabi, x86_64-linux-android, i686-linux-android]
     steps:
